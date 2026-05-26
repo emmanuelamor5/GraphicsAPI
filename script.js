@@ -1,6 +1,3 @@
-// Mini software rasterizer + small puzzle game
-// Stage annotations are marked: [APPLICATION], [GEOMETRY], [RASTERIZATION]
-
 const canvas = document.getElementById('screen');
 const W = canvas.width = 820;
 const H = canvas.height = 480;
@@ -21,7 +18,7 @@ function norm(a){const l=Math.hypot(a[0],a[1],a[2])||1;return [a[0]/l,a[1]/l,a[2
 let depth = new Float32Array(W*H);
 function clearBuffers(){for(let i=0;i<buf.length;i++) buf[i]=0; for(let i=0;i<depth.length;i++) depth[i]=Infinity}
 
-// [APPLICATION] Define scene, objects, camera, light
+// [APPLICATION]Define scene, objects, camera, light
 const lightDir = norm([0.5,0.8,0.6]);
 const camera = {pos: [0,0,3], fov: Math.PI/3};
 
@@ -124,7 +121,7 @@ function renderMask(sceneArr){
   return mask;
 }
 
-// [RASTERIZATION] Draw triangle to image buffer with depth test and flat shading
+// [RASTERIZATION]Draw triangle to image buffer with depth test and flat shading
 function rasterizeTri(p0,p1,p2,color,depthVal){
   const minX = Math.max(0, Math.min(p0.x,p1.x,p2.x)|0);
   const maxX = Math.min(W-1, Math.max(p0.x,p1.x,p2.x)|0);
@@ -152,7 +149,7 @@ function rasterizeTri(p0,p1,p2,color,depthVal){
 // Draw loop
 let t=0;
 
-// --- Game setup ---
+// Game setup and UI controls
 const selButtons = {cube: document.getElementById('sel-cube'), pyr: document.getElementById('sel-pyr')};
 const rotX = document.getElementById('rotX'), rotY = document.getElementById('rotY');
 const laz = document.getElementById('laz'), lel = document.getElementById('lel');
