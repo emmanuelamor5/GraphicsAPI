@@ -1,0 +1,15 @@
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial}
+body{display:flex;flex-direction:column;align-items:center;gap:8px;background:#111;color:#eee}
+h1{font-size:16px;margin:14px 0}
+.hint{opacity:.8;font-size:13px}
+#screen{background:#000;border:1px solid #333;width:820px;height:480px}
+.controls{display:flex;gap:12px;align-items:flex-start;margin-top:8px}
+.controls .left{display:flex;flex-direction:column;gap:6px}
+.controls label{font-size:13px}
+.controls input[type=range]{width:260px}
+.controls .buttons{display:flex;gap:6px}
+.controls button{padding:6px 8px}
+.controls .right{margin-left:18px;color:#ddd}
+#targetPreview{width:160px;height:120px;background:#222;border:1px solid #333;display:flex;align-items:center;justify-content:center;opacity:0.9}
+#progress{margin-top:8px;font-weight:600}
+.small{font-size:12px}
