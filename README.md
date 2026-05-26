@@ -1,6 +1,6 @@
 Mini Software Rasterizer — Puzzle Game
 
-Overview
+Overview;
 This project is a small demonstration of a software graphics pipeline implemented with HTML5 Canvas, CSS and JavaScript. It includes a simple puzzle game where the player rotates two 3D objects and adjusts the light to match a target silhouette.
 
 How the project maps to the graphics pipeline
@@ -15,13 +15,6 @@ Files
 - `style.css` — basic styling.
 - `script.js` — the software rasterizer and game logic.
 
-How to run
-Open the project folder and open `index.html` in your browser. From PowerShell you can run:
-
-```powershell
-cd "c:\Users\emman\OneDrive\Documents\Graphics API\GraphicsAPI"
-start index.html
-```
 
 Controls
 
